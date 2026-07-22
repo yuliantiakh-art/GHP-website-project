@@ -31,7 +31,7 @@ export const handler = async (event) => {
     const { eventName, eventId, eventTime, eventSourceUrl, userData = {}, customData = {} } = body;
 
     // Get Meta Pixel credentials from environment variables (configured in Netlify)
-    const pixelId = process.env.META_PIXEL_ID || '981635738248481';
+    const pixelId = '981635738248481';
     const accessToken = process.env.META_ACCESS_TOKEN;
     const testEventCode = process.env.META_TEST_EVENT_CODE;
 
