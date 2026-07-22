@@ -20,17 +20,17 @@ export default function Home() {
               #GerakanHasanPeduli
             </span>
             <h1 className="font-display text-[48px] md:text-[64px] font-extrabold leading-tight mb-6">
-              Bersama Menghadirkan Manfaat untuk Sesama
+              Bersama Membangun Budaya Berbagi yang Amanah.
             </h1>
             <p className="font-sans text-lg text-surface-variant mb-10 max-w-lg">
-              Menggerakkan kepedulian melalui aksi nyata untuk memberdayakan masyarakat dan memberikan harapan bagi mereka yang membutuhkan.
+              Gerakan Hasan Peduli hadir untuk menghubungkan orang-orang yang ingin menghadirkan manfaat nyata dengan masyarakat yang membutuhkan melalui aksi yang transparan, terdokumentasi, dan berkelanjutan.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
-                to="/program" 
+                to="/checkout" 
                 className="bg-primary text-on-primary font-bold px-8 py-4 rounded-full text-lg shadow-xl hover:translate-y-[-2px] transition-all duration-300 text-center"
               >
-                Mulai Berbagi Sekarang
+                Titipkan Kebaikan
               </Link>
               <Link 
                 to="/transparansi" 
@@ -60,7 +60,7 @@ export default function Home() {
             
             {/* Donate Bento */}
             <Link 
-              to="/program"
+              to="/checkout"
               className="md:col-span-7 group relative overflow-hidden rounded-3xl bg-primary-container h-80 flex flex-col justify-end p-8 cursor-pointer shadow-sm hover:shadow-xl transition-all duration-500"
             >
               <div 
@@ -72,7 +72,7 @@ export default function Home() {
                 <span className="material-symbols-outlined text-4xl text-white mb-4">volunteer_activism</span>
                 <h3 className="font-display text-headline-md text-white mb-2">Ikut Berdonasi</h3>
                 <p className="text-white/90 mb-4 max-w-md">Salurkan bantuan finansial Anda untuk mendukung berbagai program kemanusiaan kami.</p>
-                <span className="inline-flex items-center gap-2 font-bold text-white">Donasi Sekarang <span className="material-symbols-outlined">arrow_forward</span></span>
+                <span className="inline-flex items-center gap-2 font-bold text-white">Titipkan Kebaikan <span className="material-symbols-outlined">arrow_forward</span></span>
               </div>
             </Link>
 
@@ -103,8 +103,11 @@ export default function Home() {
             </Link>
 
             {/* Corporate Bento */}
-            <div 
-              className="md:col-span-7 group relative overflow-hidden rounded-3xl bg-inverse-surface h-80 flex flex-col justify-end p-8 cursor-pointer shadow-sm hover:shadow-xl transition-all duration-500"
+            <a 
+              href="https://wa.me/6285159630057?text=Assalamu'alaikum%20Admin%20GHP,%20saya%20ingin%20berdiskusi%20mengenai%20Kolaborasi%20CSR."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="md:col-span-7 group relative overflow-hidden rounded-3xl bg-inverse-surface h-80 flex flex-col justify-end p-8 cursor-pointer shadow-sm hover:shadow-xl transition-all duration-500 block"
             >
               <div 
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-30" 
@@ -116,7 +119,7 @@ export default function Home() {
                 <p className="text-surface-variant mb-4 max-w-md">Kemitraan strategis untuk perusahaan yang ingin menciptakan dampak sosial yang berkelanjutan.</p>
                 <span className="inline-flex items-center gap-2 font-bold text-primary-fixed">Jalin Kemitraan <span className="material-symbols-outlined">arrow_forward</span></span>
               </div>
-            </div>
+            </a>
 
           </div>
         </div>
@@ -140,9 +143,13 @@ export default function Home() {
           <div className="w-full md:w-1/2">
             <h4 className="text-primary font-bold mb-4 uppercase tracking-widest text-caption">Tentang Hasan Peduli</h4>
             <h2 className="font-display text-headline-lg text-on-surface mb-6">Mewujudkan Masyarakat Mandiri &amp; Berdaya</h2>
-            <p className="text-lg text-on-surface-variant mb-8">
-              Gerakan Hasan Peduli lahir dari keinginan tulus untuk menjembatani antara mereka yang ingin berbagi dengan mereka yang berjuang di garda depan kemiskinan dan keterbatasan.
-            </p>
+            <div className="text-lg text-on-surface-variant mb-8 space-y-4">
+              <p><strong>Hasan</strong> dalam bahasa Arab berarti <strong>kebaikan</strong>. Bagi kami, Hasan bukan sekadar nama. Hasan adalah nilai yang kami percaya masih hidup di hati jutaan masyarakat Indonesia.</p>
+              <p>Gerakan Hasan Peduli lahir dari keyakinan bahwa Indonesia tidak kekurangan orang baik. Di tengah berbagai kesulitan yang dihadapi masyarakat, masih banyak orang yang ingin membantu. Namun, berkurangnya kepercayaan membuat banyak niat baik tidak pernah menjadi tindakan nyata.</p>
+              <p>Karena itulah kami hadir, bukan sekadar sebagai lembaga, melainkan <strong>sebuah komunitas yang mengajak masyarakat menghidupkan kembali Jiwa Hasan</strong> melalui aksi yang nyata, transparan, dan saling melibatkan.</p>
+              <p>Kami percaya, ketika kebaikan dipertemukan dengan kepercayaan, akan lahir gerakan yang mampu membawa manfaat bagi lebih banyak orang.</p>
+              <p><strong>Gerakan Hasan Peduli hadir untuk menyuburkan kembali Jiwa Hasan, agar setiap kepedulian tumbuh menjadi tindakan nyata bagi sesama.</strong></p>
+            </div>
             <div className="space-y-6 mb-10">
               <div className="flex gap-4">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -236,7 +243,7 @@ export default function Home() {
                     <div className="h-full bg-primary w-[20%] rounded-full"></div>
                   </div>
                   <Link 
-                    to="/program" 
+                    to="/checkout?program=Jejak%20Amal%20Qur'an" 
                     className="block text-center w-full bg-primary/10 text-primary font-bold py-3 rounded-xl hover:bg-primary hover:text-on-primary transition-all duration-300"
                   >
                     Donasi Sekarang
@@ -285,22 +292,22 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
             <div className="p-6">
               <span className="material-symbols-outlined text-4xl mb-4 opacity-70">task_alt</span>
-              <div className="font-display text-display-lg mb-1">124</div>
+              <div className="font-display text-display-lg mb-1">15+</div>
               <div className="font-semibold text-caption uppercase tracking-wider opacity-80">Program Berjalan</div>
             </div>
             <div className="p-6">
               <span className="material-symbols-outlined text-4xl mb-4 opacity-70">volunteer_activism</span>
-              <div className="font-display text-display-lg mb-1">8,540+</div>
+              <div className="font-display text-display-lg mb-1">100+</div>
               <div className="font-semibold text-caption uppercase tracking-wider opacity-80">Total Donatur</div>
             </div>
             <div className="p-6">
               <span className="material-symbols-outlined text-4xl mb-4 opacity-70">diversity_3</span>
-              <div className="font-display text-display-lg mb-1">1,200</div>
+              <div className="font-display text-display-lg mb-1">20+</div>
               <div className="font-semibold text-caption uppercase tracking-wider opacity-80">Relawan Aktif</div>
             </div>
             <div className="p-6">
               <span className="material-symbols-outlined text-4xl mb-4 opacity-70">sentiment_satisfied</span>
-              <div className="font-display text-display-lg mb-1">25,600</div>
+              <div className="font-display text-display-lg mb-1">350+</div>
               <div className="font-semibold text-caption uppercase tracking-wider opacity-80">Penerima Manfaat</div>
             </div>
           </div>
@@ -325,10 +332,12 @@ export default function Home() {
                   <p className="text-on-surface-variant mb-8">Setiap rupiah yang Anda amanahkan dikelola secara profesional dan diaudit secara berkala untuk memastikan manfaat maksimal bagi penerima.</p>
                   <div className="flex flex-wrap gap-4">
                     <a 
-                      href="#" 
+                      href="https://wa.me/6285159630057?text=Assalamu'alaikum%20Admin%20GHP,%20saya%20minta%20dikirimkan%20Laporan%20Dampak%20Tahunan%202025%20PDF." 
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="bg-primary text-on-primary font-bold px-6 py-3 rounded-full flex items-center gap-2 hover:shadow-md transition-all"
                     >
-                      <span className="material-symbols-outlined">download</span> Unduh PDF
+                      <span className="material-symbols-outlined">download</span> Minta PDF via WA
                     </a>
                     <Link 
                       to="/transparansi" 
@@ -391,13 +400,19 @@ export default function Home() {
       <section className="py-xl bg-surface-container-highest/30">
         <div className="px-gutter max-w-max-width mx-auto text-center">
           <p className="font-semibold text-caption text-on-surface-variant uppercase tracking-widest mb-10">Didukung Oleh Mitra &amp; Kolaborator Kami</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-60 hover:opacity-100 transition-opacity">
-            <div className="p-4 flex justify-center"><div className="h-12 w-32 bg-on-surface/20 rounded-lg"></div></div>
-            <div className="p-4 flex justify-center"><div className="h-12 w-32 bg-on-surface/20 rounded-lg"></div></div>
-            <div className="p-4 flex justify-center"><div className="h-12 w-32 bg-on-surface/20 rounded-lg"></div></div>
-            <div className="p-4 flex justify-center"><div className="h-12 w-32 bg-on-surface/20 rounded-lg"></div></div>
-            <div className="p-4 flex justify-center"><div className="h-12 w-32 bg-on-surface/20 rounded-lg"></div></div>
-            <div className="p-4 flex justify-center"><div className="h-12 w-32 bg-on-surface/20 rounded-lg"></div></div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 items-center justify-center max-w-5xl mx-auto">
+            <div className="p-4 md:p-6 bg-white rounded-2xl shadow-sm border border-outline-variant/30 flex justify-center items-center h-28 md:h-36 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+              <img src="/logos/wgs.jpg" alt="Walden Global Services (WGS)" className="max-h-full max-w-full object-contain" />
+            </div>
+            <div className="p-4 md:p-6 bg-white rounded-2xl shadow-sm border border-outline-variant/30 flex justify-center items-center h-28 md:h-36 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+              <img src="/logos/merdeka-kolaborasi.jpg" alt="Merdeka Kolaborasi" className="max-h-full max-w-full object-contain" />
+            </div>
+            <div className="p-4 md:p-6 bg-white rounded-2xl shadow-sm border border-outline-variant/30 flex justify-center items-center h-28 md:h-36 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+              <img src="/logos/lazgdi.jpg" alt="LAZGDI Graha Dhuafa Indonesia" className="max-h-full max-w-full object-contain" />
+            </div>
+            <div className="p-4 md:p-6 bg-white rounded-2xl shadow-sm border border-outline-variant/30 flex justify-center items-center h-28 md:h-36 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+              <img src="/logos/bosc.jpg" alt="B.O.S.C Barudak Online Sebrang Citylink" className="max-h-full max-w-full object-contain" />
+            </div>
           </div>
         </div>
       </section>
@@ -414,8 +429,8 @@ export default function Home() {
               <h2 className="font-display text-display-lg mb-6">Siap Menjadi Bagian dari Perubahan?</h2>
               <p className="font-sans text-lg text-surface-variant mb-10">Tindakan kecil Anda hari ini adalah awal dari keajaiban bagi orang lain. Mari bergabung dalam misi kemanusiaan Hasan Peduli.</p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Link to="/program" className="bg-primary text-on-primary font-bold px-10 py-4 rounded-full text-lg hover:scale-105 transition-transform duration-300 text-center">
-                  Donasi Sekarang
+                <Link to="/checkout" className="bg-primary text-on-primary font-bold px-10 py-4 rounded-full text-lg hover:scale-105 transition-transform duration-300 text-center">
+                  Titipkan Kebaikan
                 </Link>
                 <Link to="/relawan" className="bg-white text-on-surface font-bold px-10 py-4 rounded-full text-lg hover:bg-surface-variant transition-all duration-300 text-center">
                   Daftar Relawan

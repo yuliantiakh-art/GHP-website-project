@@ -50,10 +50,10 @@ export default function Header() {
         {/* CTA and Burger Menu */}
         <div className="flex items-center gap-4">
           <Link 
-            to="/program"
+            to="/checkout"
             className="bg-primary text-on-primary font-bold px-6 py-3 rounded-full hover:shadow-lg active:scale-95 transition-all duration-200"
           >
-            Ikut Berdonasi
+            Titipkan Kebaikan
           </Link>
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}

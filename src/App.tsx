@@ -10,6 +10,8 @@ import Volunteer from './pages/Volunteer.tsx';
 import ApplyHelp from './pages/ApplyHelp.tsx';
 import Transparency from './pages/Transparency.tsx';
 
+import Checkout from './pages/Checkout.tsx';
+
 function ScrollToTop() {
   const { pathname } = window.location;
   React.useEffect(() => {
@@ -34,6 +36,7 @@ export default function App() {
             <Route path="/relawan" element={<Volunteer />} />
             <Route path="/bantuan" element={<ApplyHelp />} />
             <Route path="/transparansi" element={<Transparency />} />
+            <Route path="/checkout" element={<Checkout />} />
           </Routes>
         </main>
         <Footer />

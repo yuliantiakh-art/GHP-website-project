@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 export default function ProgramDetail2() {
   return (
-    <div className="fade-in pt-20">
+    <div className="fade-in pt-20 pb-16 md:pb-0">
       
-      {/* Hero Banner */}
+      {/* Hero Section */}
       <section className="relative w-full overflow-hidden">
         <div className="h-[60vh] md:h-[70vh] w-full relative">
           <img 
@@ -16,7 +16,7 @@ export default function ProgramDetail2() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
           <div className="absolute bottom-0 left-0 w-full p-margin-mobile md:p-xl">
             <div className="max-w-max-width mx-auto">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold text-label-md mb-4">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-bold text-label-md mb-4">
                 Dakwah &amp; Pendidikan
               </span>
               <h1 className="font-display text-[36px] md:text-5xl text-white font-extrabold mb-4 max-w-3xl">
@@ -37,7 +37,7 @@ export default function ProgramDetail2() {
             <div className="flex justify-between items-end mb-4">
               <div>
                 <p className="text-text-muted font-bold text-caption uppercase tracking-wider">Terkumpul</p>
-                <h3 className="font-display text-headline-lg text-primary">Rp 10.000.000</h3>
+                <h3 className="font-display text-headline-lg text-primary">Rp 10 Jt</h3>
               </div>
               <div className="text-right">
                 <p className="text-text-muted font-bold text-caption uppercase tracking-wider">Target</p>
@@ -53,9 +53,12 @@ export default function ProgramDetail2() {
             </div>
           </div>
           <div className="lg:border-l border-outline-variant lg:pl-gutter flex flex-col gap-3">
-            <button className="w-full bg-primary text-on-primary py-4 rounded-xl font-bold text-lg hover:bg-primary/95 transition-colors shadow-lg active:scale-98">
-              Mari Berbagi Sekarang
-            </button>
+            <Link 
+              to="/checkout?program=Tebar%20Cahaya%20Qur'an" 
+              className="block text-center w-full bg-primary text-on-primary py-4 rounded-xl font-bold text-lg hover:bg-primary/95 transition-colors shadow-lg active:scale-98"
+            >
+              Titipkan Kebaikan
+            </Link>
             <p className="text-center font-semibold text-caption text-text-muted">
               Sedekah jariyah Anda akan disalurkan 100% untuk pengadaan &amp; distribusi Al-Qur'an.
             </p>
@@ -69,11 +72,11 @@ export default function ProgramDetail2() {
           <div className="space-y-6">
             <h2 className="font-display text-headline-lg text-text-main border-l-4 border-primary pl-4">Cerita Program</h2>
             <div className="prose prose-lg text-text-muted font-sans text-lg space-y-4">
-              <p>Di setiap sudut negeri, selalu ada orang-orang yang menjaga cahaya Al-Qur'an tetap hidup. Anak-anak yang tekun belajar mengaji, para santri yang menghafal ayat demi ayat, hingga masyarakat yang menjadikan masjid sebagai tempat bertumbuh dalam iman.</p>
-              <p>Namun, tidak semua dari mereka memiliki mushaf Al-Qur'an yang layak untuk belajar.</p>
-              <p>Melalui Program Tebar Cahaya Qur'an, Gerakan Hasan Peduli mengajak Anda menghadirkan lebih dari sekadar mushaf. Kita bersama menghadirkan kesempatan untuk belajar, menghafal, memahami, dan mengamalkan firman Allah.</p>
-              <p>Setiap Al-Qur'an yang tersalurkan akan menjadi teman belajar, saksi lahirnya generasi Qur'ani, dan insyaAllah menjadi amal jariyah yang terus mengalir selama ayat-ayat-Nya dibaca.</p>
-              <p>Mari bersama menebarkan cahaya Al-Qur'an hingga ke pelosok Indonesia. Karena setiap mushaf yang kita titipkan hari ini, dapat menerangi banyak hati untuk waktu yang sangat panjang.</p>
+              <p className="font-bold text-text-main">Menghadirkan Cahaya untuk Lebih Banyak Hati</p>
+              <p>Masih banyak saudara kita yang memiliki semangat belajar Al-Qur'an, namun belum memiliki mushaf yang layak. Di balik setiap keterbatasan itu, tersimpan harapan agar cahaya Al-Qur'an dapat terus menerangi kehidupan mereka.</p>
+              <p>Melalui Program Tebar Cahaya Qur'an, Gerakan Hasan Peduli mengajak masyarakat menghadirkan lebih dari sekadar mushaf. Kita bersama-sama menghadirkan kesempatan untuk belajar, memahami, menghafal, dan mengamalkan firman Allah bagi mereka yang membutuhkan.</p>
+              <p>Setiap mushaf yang tersalurkan akan menjadi saksi lahirnya generasi Qur'ani, sekaligus menjadi amal jariyah yang terus mengalir selama ayat-ayat Allah dibaca.</p>
+              <p>Mari bersama menebarkan cahaya Al-Qur'an hingga menjangkau lebih banyak pelosok Indonesia. Karena satu mushaf yang kita hadirkan hari ini dapat menerangi banyak hati untuk waktu yang sangat panjang.</p>
             </div>
 
             {/* Impact Metrics */}
@@ -119,12 +122,12 @@ export default function ProgramDetail2() {
                 <p className="text-caption font-semibold text-text-muted">Terverifikasi</p>
               </div>
             </div>
-            <div className="space-y-3 pt-3 border-t border-outline-variant">
-              <div className="flex items-center gap-2 text-text-muted font-semibold text-caption">
+            <div className="space-y-3 pt-3 border-t border-outline-variant text-sm text-text-muted">
+              <div className="flex items-center gap-2 font-semibold">
                 <span className="material-symbols-outlined text-lg">calendar_today</span>
                 <span>Mulai: 01 Jan 2026</span>
               </div>
-              <div className="flex items-center gap-2 text-text-muted font-semibold text-caption">
+              <div className="flex items-center gap-2 font-semibold">
                 <span className="material-symbols-outlined text-lg">update</span>
                 <span>Berakhir: 31 Des 2026</span>
               </div>
@@ -165,6 +168,16 @@ export default function ProgramDetail2() {
           </div>
         </div>
       </section>
+
+      {/* Fixed Donation CTA for Mobile */}
+      <div className="md:hidden fixed bottom-0 left-0 w-full p-4 bg-surface/90 backdrop-blur-md z-40 shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
+        <Link 
+          to="/checkout?program=Tebar%20Cahaya%20Qur'an" 
+          className="block text-center w-full bg-primary text-on-primary py-3.5 rounded-full font-bold text-label-md shadow-lg"
+        >
+          Mari Berbagi Sekarang
+        </Link>
+      </div>
 
     </div>
   );
