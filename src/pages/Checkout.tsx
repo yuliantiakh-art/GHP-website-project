@@ -1,46 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 
-// Generate a unique Event ID for deduplication
-const generateEventId = () => {
-  return 'event_' + Date.now() + '_' + Math.random().toString(36).substring(2, 11);
-};
-
-// Twin track function: Browser Meta Pixel + Server-side Conversions API (CAPI)
-const sendMetaEvent = (
-  eventName: string,
-  eventId: string,
-  customData: any,
-  userData: { phone?: string; name?: string } = {}
-) => {
-  // 1. Browser Meta Pixel (using eventID for deduplication)
-  if (typeof window !== 'undefined' && (window as any).fbq) {
-    (window as any).fbq('track', eventName, customData, { eventID: eventId });
-  }
-
-  // 2. Server-side CAPI via Netlify Function
-  fetch('/.netlify/functions/track-event', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      eventName,
-      eventId,
-      eventTime: Math.floor(Date.now() / 1000),
-      eventSourceUrl: window.location.href,
-      userData: {
-        clientUserAgent: navigator.userAgent,
-        phone: userData.phone,
-        name: userData.name,
-      },
-      customData,
-    }),
-  }).catch((err) => {
-    console.error('Error sending CAPI event:', err);
-  });
-};
-
 export default function Checkout() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
@@ -61,16 +21,13 @@ export default function Checkout() {
 
   // Track InitiateCheckout event on page load (mount)
   useEffect(() => {
-    const eventId = generateEventId();
-    sendMetaEvent(
-      'InitiateCheckout',
-      eventId,
-      {
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'InitiateCheckout', {
         content_name: programTitle,
         value: totalPrice,
         currency: 'IDR'
-      }
-    );
+      });
+    }
   }, []);
 
   const handleAdjustMushaf = (delta: number) => {
@@ -90,22 +47,15 @@ export default function Checkout() {
     e.preventDefault();
 
     // Track Purchase event on WhatsApp confirmation button click
-    const eventId = generateEventId();
-    sendMetaEvent(
-      'Purchase',
-      eventId,
-      {
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'Purchase', {
         value: totalPrice,
         currency: 'IDR',
         content_name: programTitle,
         content_category: 'Donation',
         num_items: mushafCount
-      },
-      {
-        phone: whatsapp || undefined,
-        name: isAnonymous ? undefined : donorName || undefined
-      }
-    );
+      });
+    }
 
     const waText = encodeURIComponent(
       `Assalamu'alaikum Admin Gerakan Hasan Peduli,\n\n` +
